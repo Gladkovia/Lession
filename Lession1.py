@@ -9,7 +9,7 @@ what = input( "Что делаем (+, -):" )
 print(Back.RED)
 a = float(input("Введи первое чило: ") )
 print(Back.CYAN)
-b = float(input("Ввиди второе число: ") )
+b = float(input("Введи второе число: ") )
 
 print(Back.YELLOW)
 if what == "+":
@@ -19,4 +19,4 @@ elif what == "-":
     c = a - b
     print("Результат " + str(c))
 else:
-    print("Нет такого значения")
+    print("Нет такого значения!")
