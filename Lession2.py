@@ -10,7 +10,9 @@ owm = OWM('b6afb6109ec39d64c7829045fbb8fd74', language = "ru")
 observation = owm.weather_at_place(place)
 w = observation.get_weather()
 status = w.get_detailed_status()
-print("В вашем городе " + place + " сейчас " + (status) )
+temp = w.get_temperature('celsius')["temp"]
+print("В вашем городе " + place + " сейчас " + status )
+print("Температура в " + place + "ровна " + str(temp))
 
 #place = input("В каком городе: ")
 # Search for current weather in London (Great Britain) and get details
