@@ -1,6 +1,8 @@
 import pyowm
 from pyowm import OWM
 
+
+
 place = input("В каком городе: ")
 owm = OWM('b6afb6109ec39d64c7829045fbb8fd74', language = "ru")
 
@@ -17,3 +19,5 @@ elif temp < 20:
     print("Сейчас тепло! " + str(temp) )
 else:
     print("Сейчас " + str(temp) + " на твое усмотрение")
+
+print(w)
