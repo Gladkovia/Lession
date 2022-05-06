@@ -5,11 +5,12 @@ from pyowm import OWM
 #from pyowm.utils import timestamps
 
 place = input("В каком городе: ")
-owm = OWM('b6afb6109ec39d64c7829045fbb8fd74')
+owm = OWM('b6afb6109ec39d64c7829045fbb8fd74', language = "ru")
 #mgr = owm.weather_manager()
 observation = owm.weather_at_place(place)
 w = observation.get_weather()
-print(w)
+status = w.get_detailed_status()
+print("В вашем городе " + place + " сейчас " + (status) )
 
 #place = input("В каком городе: ")
 # Search for current weather in London (Great Britain) and get details
